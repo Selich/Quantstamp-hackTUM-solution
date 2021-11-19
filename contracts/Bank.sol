@@ -11,7 +11,10 @@ contract Bank is IBank {
         payable
         external
         override
-        returns (bool) {}
+        returns (bool) {
+            require(token == 0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE , 'token not supported');
+
+        }
 
     function withdraw(address token, uint256 amount)
         external
